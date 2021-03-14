@@ -14,10 +14,12 @@ Participate in speedrun and see how fast I can design the provided mock
 <img src="/screenshots/bloom.gif" width="260">
 
 ### ☀️ Light Mode
+||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
 | ![Imgur](./screenshots/1.png) | ![Imgur](./screenshots/2.png) | ![Imgur](./screenshots/3.png) |
 
 ### 🌙 Dark Mode
+||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
 | ![Imgur](./screenshots/1-d.png) | ![Imgur](./screenshots/2-d.png) | ![Imgur](./screenshots/3-d.png) |
 
