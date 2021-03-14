@@ -29,10 +29,10 @@ private val DarkColorPalette = darkColors(
     secondary = green300,
     secondaryVariant = green300,
     onSecondary = gray,
-    // background = gray,
-    // surface = white150,
-    // onBackground = Color.White,
-    // onSurface = white850,
+    background = gray,
+    surface = white150,
+    onBackground = Color.White,
+    onSurface = white850,
 )
 
 private val LightColorPalette = lightColors(
@@ -42,10 +42,10 @@ private val LightColorPalette = lightColors(
     secondary = pink900,
     secondaryVariant = pink900,
     onSecondary = Color.White,
-    // background = Color.White,
-    // onBackground = gray,
-    // surface = white850,
-    // onSurface = gray,
+    background = Color.White,
+    onBackground = gray,
+    surface = white850,
+    onSurface = gray,
 )
 
 @Composable
