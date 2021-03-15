@@ -18,6 +18,7 @@ package com.example.androiddevchallenge.ui
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -167,7 +168,9 @@ fun Home() {
         }
     ) {
         LazyColumn(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(bottom = 58.dp),
             content = {
                 item {
                     OutlinedTextField(
@@ -234,9 +237,12 @@ fun browseItem() {
                         Modifier
                             .padding(
                                 start = if (index == 0) 16.dp else 8.dp,
-                                top = 16.dp
+                                top = 16.dp,
+                                bottom = 1.dp,
+                                end = if (index == browseThemes.size - 1) 16.dp else 0.dp
                             )
                             .size(width = 136.dp, height = 136.dp)
+                            .background(color = MaterialTheme.colors.background),
                     )
                 }
             }
@@ -290,15 +296,16 @@ fun browseThemesItem(item: BrowseThemes, modifier: Modifier) {
     Card(
         modifier = modifier,
         shape = MaterialTheme.shapes.small,
-        elevation = 1.dp
+        elevation = 1.dp,
     ) {
-        Column {
+        Column(modifier = Modifier.background(color = MaterialTheme.colors.background)) {
             if (bitmap != null) {
                 Image(
                     bitmap!!.asImageBitmap(),
                     modifier = Modifier
                         .height(96.dp)
-                        .fillMaxWidth(),
+                        .fillMaxWidth()
+                        .background(color = MaterialTheme.colors.background),
                     contentDescription = "",
                     contentScale = ContentScale.Crop,
                 )
@@ -341,7 +348,8 @@ fun homeGardenItem(item: HomeGarden) {
         modifier = Modifier
             .fillMaxWidth()
             .height(72.dp)
-            .padding(top = 8.dp),
+            .padding(top = 8.dp)
+            .background(color = MaterialTheme.colors.background),
         shape = MaterialTheme.shapes.small,
         elevation = 1.dp
     ) {
@@ -355,7 +363,12 @@ fun homeGardenItem(item: HomeGarden) {
 
                 override fun onLoadCleared(placeholder: Drawable?) {}
             })
-        Row(modifier = Modifier.fillMaxSize(), verticalAlignment = Alignment.CenterVertically) {
+        Row(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(color = MaterialTheme.colors.background),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             if (bitmap != null) {
                 Image(
                     bitmap!!.asImageBitmap(),

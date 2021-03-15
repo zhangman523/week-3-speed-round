@@ -38,6 +38,7 @@ import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
+import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -193,7 +194,11 @@ fun Login(navController: NavController) {
                     singleLine = true,
                     keyboardOptions = KeyboardOptions(
                         imeAction = ImeAction.Next
-                    )
+                    ),
+                    colors = TextFieldDefaults.textFieldColors(
+                        focusedIndicatorColor = MaterialTheme.colors.onPrimary,
+                        unfocusedIndicatorColor = MaterialTheme.colors.onPrimary,
+                    ),
                 )
                 OutlinedTextField(
                     modifier = Modifier
@@ -212,7 +217,11 @@ fun Login(navController: NavController) {
                     keyboardOptions = KeyboardOptions(
                         imeAction = ImeAction.Done,
                         keyboardType = KeyboardType.Password
-                    )
+                    ),
+                    colors = TextFieldDefaults.textFieldColors(
+                        focusedIndicatorColor = MaterialTheme.colors.onPrimary,
+                        unfocusedIndicatorColor = MaterialTheme.colors.onPrimary,
+                    ),
                 )
                 val annotatedString =
                     AnnotatedString.Builder("By clicking below, you agree to out Terms of Use and consent to out Privacy Policy.")
